@@ -17,4 +17,4 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
     - name: Testing Dockerfile
-      run: docker run --rm --file Dockerfile --tag my-image-name:$(date +%s)
+      run: docker run . --file Dockerfile --tag my-image-name:$(date +%s)
