@@ -1,0 +1,22 @@
+name: Windows system test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Systeminfo
+      run: systeminfo
+    - name: Hello World
+      run: echo Hello World!
+    - name: Command Prompt version
+      run: ver
