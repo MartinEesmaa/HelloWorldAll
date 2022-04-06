@@ -18,5 +18,5 @@ jobs:
       run: systeminfo
     - name: Hello World
       run: echo Hello World!
-    - name: Command Prompt version
-      run: ver
+    - name: Run batch now
+      run: ./windows-system-test.ps1
