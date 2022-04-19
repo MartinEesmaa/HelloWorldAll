@@ -18,5 +18,14 @@ jobs:
       run: systeminfo
     - name: Hello World
       run: echo Hello World!
+    - name: whoami
+      run: ((Get-WMIObject -class Win32_ComputerSystem | Select-Object -ExpandProperty username)) 
+    - name: Msinfo32
+      run: ./msinfo32.ps1
     - name: Run batch now
       run: ./windows-system-test.ps1
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v3.0.0
+      with:
+        name: Test to upload
+        path: \%userprofile%\Desktop\welp.txt
